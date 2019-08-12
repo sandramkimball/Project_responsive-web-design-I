@@ -80,10 +80,6 @@ nav a{
 	word-spacing: 25px;
 	text-decoration: none;
 }
-/* .logo{
-	margin-left: 100px;
-	margin-top: 20px;
-} */
 
 header{
     margin: 5% 5%;
@@ -117,12 +113,6 @@ button{
 }
 
                     /*     MIDDLE    */
-
-/* .information title{
-	display: inline-block;
-	width: 200px;
-	padding: 50px;
-} */
 
 h2{
 	padding: 5px;
@@ -159,8 +149,7 @@ h2{
 
 .content img .middle-img{
     display: flex;
-    align-content: center;
-
+    width: 100%;
 }
 
 /*      BOTTOM   */
@@ -185,4 +174,25 @@ address{
 .contact footer{
 	text-align: center;
 	padding: 15px;
+}
+
+@media screen and (max-width: 800px){
+    body{width: 95%; margin: 0 3%; justify-content: center;}
+    .container a, .logo{flex-direction: column;}
+    header{justify-content: center; height: 40%;}	
+    header h1, button{align-items: space-between;}
+    header .codeSnip{display: none;}
+    h1{font-size: 65px;}
+    button{font-size: 15px; padding: 4%;}
+    
+    /*middle*/
+    .content{margin: 0 3%; }
+    .middle-img{overflow:hidden; width: 100%; height: auto;}
+    h2{font-size: 18px;}
+    p{font-size: 16px;}
+}
+
+@media screen and (max-width: 500px){
+    nav a{flex-direction: column;}
+    .content{flex-direction: column;}
 }
