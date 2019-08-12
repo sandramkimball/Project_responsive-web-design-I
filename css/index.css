@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5 {
 
                     /*     TOP     */
 
-.container div{
+.container{
     display: flex;
     flex-direction: row;
     margin: 2% 0;
@@ -179,7 +179,8 @@ address{
 @media screen and (max-width: 800px){
     body{width: 95%; margin: 0 3%; justify-content: center;}
     /*navigation*/
-    nav{justify-content: space-between; align-content: center;}
+    nav .container{justify-content: space-between; align-content: center;}
+    nav .logo{align-content: flex-start;}
     /*header*/
     header{justify-content: center;  margin: 1% 0;}	
     header .codeSnip{display: none;}
@@ -198,7 +199,7 @@ address{
 
 @media screen and (max-width: 600px){
     body{margin: 0 1%;}
-    nav{flex-direction: column-reverse; text-align: center; }
+    nav .container{display: flex; flex-direction: column; text-align: center; }
     nav a{border-bottom: .05rem solid grey; width: 100%;}
     nav .logo{justify-content: center;}
     .content{flex-direction: column;}
