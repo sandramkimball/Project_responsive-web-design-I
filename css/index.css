@@ -93,23 +93,22 @@ header{
 header .title{
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    justify-content: space-between;
+    align-content: center;
 }
 
-
 h1{
+    font-size: 6rem;
 	text-align: center;
-	margin-left: 10px;
-	margin-bottom: -80px;
 	font-size: 75px;
 }
 
 button{
-	padding: 20px;
+	padding: 1.25rem 3rem;
 	border: solid black 1px;
 	background-color: #fff;
-    font-size: 20px;
-    margin: 10px;
+    font-size: 1.25rem;
+    margin: 10%;
 }
 
                     /*     MIDDLE    */
@@ -127,9 +126,8 @@ h2{
     
 }
 
-.content div, img{ 
+.content div{ 
     margin: 2% 0;
-    justify-content: center;
 }
 
 .features, .about{	
@@ -145,11 +143,6 @@ h2{
 	width: 30%;
     font-size: 20px;
     justify-content: space-between;
-}
-
-.content img .middle-img{
-    display: flex;
-    width: 100%;
 }
 
 /*      BOTTOM   */
@@ -178,9 +171,8 @@ address{
 
 @media screen and (max-width: 800px){
     body{width: 95%; margin: 0 3%; justify-content: center;}
-    .container a, .logo{flex-direction: column;}
+    nav a, .logo{flex-flow: column wrap;}
     header{justify-content: center; height: 40%;}	
-    header h1, button{align-items: space-between;}
     header .codeSnip{display: none;}
     h1{font-size: 65px;}
     button{font-size: 15px; padding: 4%;}
@@ -190,9 +182,13 @@ address{
     .middle-img{overflow:hidden; width: 100%; height: auto;}
     h2{font-size: 18px;}
     p{font-size: 16px;}
+
+    /*bottom*/
+    .contact{align-content: start;}
 }
 
 @media screen and (max-width: 500px){
+    body{margin: 0 1%;}
     nav a{flex-direction: column;}
-    .content{flex-direction: column;}
+    .content{flex-direction: column; width: 100%;}
 }
