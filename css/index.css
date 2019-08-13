@@ -1,3 +1,207 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+	border: 1px solid black;
+	margin: 0 10%;
+}
+
+html, body {
+	height: 100%;
+	margin: 0 10%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+                    /*     TOP     */
+
+.container{
+    display: flex;
+    flex-direction: row;
+    margin: 2% 0;
+    justify-content: space-between;
+    align-items: baseline;
+}	
+
+nav a{
+	padding: 10px;
+	color: grey;
+    text-decoration: none;
+}
+
+header{
+    margin: 5% 5%;
+    padding-bottom: 5%;
+	border-bottom: solid black 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+h1{
+    font-size: 6rem;
+	text-align: center;
+	font-size: 75px;
+}
+
+button{
+	padding: 1.25rem 3rem;
+	border: solid black 1px;
+	background-color: #fff;
+    font-size: 1.25rem;
+    margin: 10%;
+}
+
+                    /*     MIDDLE    */
+
+h2{
+	padding: 5px;
+	font-size: 20px;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5%;
+    justify-content: space-between;
+    
+}
+
+.content div{ 
+    margin: 2% 0;
+}
+
+.features, .about{	
+    flex-direction: row;
+	width: 45%;
+	height: auto;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+.middle-img{
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.services, .product, .vision{	
+    flex-direction: row;
+	width: 30%;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+/*      BOTTOM   */
 
 
+.contact{
+	padding: 40px;
+	border-top: 1px solid black;
+	margin-top: 25px;
+}
+
+h3{
+	font-weight: bold;
+	padding: 5px;
+}
+
+address{
+	width: 150px;
+	line-height: 27px;
+}
+
+.contact footer{
+	text-align: center;
+	padding: 15px;
+}
+
+@media screen and (max-width: 800px){
+    body{width: 95%; margin: 0 3%; justify-content: center;}
+    /*navigation*/
+    nav .container{justify-content: space-between; align-content: center;}
+    nav .logo{align-content: flex-start;}
+    /*header*/
+    header{justify-content: center;  margin: 1% 0;}	
+    header .codeSnip{display: none;}
+    h1{font-size: 65px;}
+    button{font-size: 15px; padding: 4%;}
+    
+    /*middle*/
+    .content{margin: 0 3%; }
+    .middle-img{overflow:hidden; width: 100%; height: auto;}
+    h2{font-size: 18px;}
+    p{font-size: 16px;}
+
+    /*bottom*/
+    .contact{align-content: flex-start;}
+}
+
+@media screen and (max-width: 600px){
+    body{margin: 0 1%;}
+    nav .container{display: flex; flex-direction: column; text-align: center; }
+    nav a{border-bottom: .05rem solid grey; width: 100%;}
+    nav .logo{justify-content: center;}
+    .content{flex-direction: column;}
+    .content div{width: 100%; margin: 5% 0;}
+}
